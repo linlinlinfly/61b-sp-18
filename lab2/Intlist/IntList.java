@@ -81,8 +81,15 @@ public class IntList {
      */
 
     public static IntList dcatenate(IntList A, IntList B) {
-        //TODO:  fill in method
-        return null;
+        if(A==null){
+            A=B;
+        }
+        IntList tem=A;
+        while(tem.rest!=null){
+            tem=tem.rest;
+        }
+        tem.rest=B;
+        return A;
     }
 
     /**
@@ -90,8 +97,20 @@ public class IntList {
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      */
     public static IntList catenate(IntList A, IntList B) {
-        //TODO:  fill in method
-        return null;
+        if(A==null){
+            return B;
+        }
+        IntList tem=new IntList(A.first,null);//因为不能破坏原A链，每个节点都要new
+
+        IntList ptr=tem;
+        while (A.rest!=null){
+            A=A.rest;//这里可以直接移动A是因为其为referenced type，是local scope
+            ptr.rest=new IntList(A.first,null);
+            ptr=ptr.rest;
+        }
+        ptr.rest=B;
+
+        return tem;
     }
 
 
@@ -125,6 +144,7 @@ public class IntList {
      * Returns a new IntList containing the ints in ARGS. You are not
      * expected to read or understand this method.
      */
+    //这个可变长度很经典
     public static IntList of(Integer... args) {
         IntList result, p;
 
