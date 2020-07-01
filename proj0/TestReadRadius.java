@@ -3,7 +3,7 @@
  *  result matches hard coded value.
  */
 public class TestReadRadius {
-
+    
     /**
      *  Checks whether or not two Doubles are equal and prints the result.
      *
@@ -12,6 +12,7 @@ public class TestReadRadius {
      *  @param  label       Label for the 'test' case
      *  @param  eps         Tolerance for the double comparison.
      */
+    
     private static void checkEquals(double actual, double expected, String label, double eps) {
         if (Math.abs(expected - actual) <= eps * Math.max(expected, actual)) {
             System.out.println("PASS: " + label + ": Expected " + expected + " and you gave " + actual);

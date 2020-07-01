@@ -81,7 +81,7 @@ public class StdDrawDemo {
 			StdDraw.clear();
 			StdDraw.picture(0, 0, imageToDraw, size, size);
 			StdDraw.show();
-			StdDraw.pause(10);
+			StdDraw.pause(10000);
 			size += 1;
 		}
 
@@ -93,11 +93,34 @@ public class StdDrawDemo {
 			size -= 1;
 		}
 	}
+	public static void drawback() {
+		/** Enables double buffering.
+		  * An animation technique where all drawing takes place on the offscreen canvas.
+		  * Only when you call show() does your drawing get copied from the
+		  * offscreen canvas to the onscreen canvas, where it is displayed
+		  * in the standard drawing window. You don't have to understand this
+		  * for CS61B. Just know that if you don't call this function, any attempt
+		  * at smooth animation will look bad and flickery (remove it and see 
+		  * what happens!). */
+		StdDraw.setScale(-100, 100);
 
+        /* Clears the drawing window. */
+        StdDraw.clear();
+
+        /* Stamps three copies of advice.png in a triangular pattern. */
+        StdDraw.picture(0, 0, imageToDraw,200,200);
+        StdDraw.picture(-100, 100, imageToDraw,200,200);
+
+        /* Shows the drawing to the screen, and waits 2000 milliseconds. */
+        StdDraw.show();
+        StdDraw.pause(2000);   
+	}
 	public static void main(String[] args) {
-		
+		/*
 		drawThree();
 		drawRandom();
 		drawZoom();
+		*/
+		drawback();
 	}
 } 
