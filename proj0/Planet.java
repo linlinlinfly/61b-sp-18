@@ -26,14 +26,14 @@ public class Planet{
         imgFileName=p.imgFileName;
     }
 
-    public double calcDx(Planet p){
+    private double calcDx(Planet p){
         double distance=p.xxPos-this.xxPos;
         
         return distance;
         
     }
 
-    public double calcDy(Planet p){
+    private double calcDy(Planet p){
         double distance=p.yyPos-this.yyPos;
         return distance;
         
@@ -68,7 +68,7 @@ public class Planet{
         return fy;
     }
     //true,false要小写，指针指向同个对象是可以比较的
-    public boolean equals(Planet p){
+    private boolean equals(Planet p){
         if(this==p){
             return true;
         }
@@ -114,7 +114,7 @@ public class Planet{
         StdDraw.picture(this.xxPos,this.yyPos, imageToDraw);
 
         /* Shows the drawing to the screen, and waits 2000 milliseconds. */
-        //StdDraw.show();
+        //StdDraw.show(); 这里不要show能解决闪屏问题
     }
 
     

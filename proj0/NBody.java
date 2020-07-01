@@ -27,7 +27,7 @@ public class NBody{
         }
         return p;
     }
-    public static void DrawBack(String path,double rRadius){
+    private static void DrawBack(String path,double rRadius){
         String imageToDraw = path;
         /** Sets up the universe so it goes from 
           * -100, -100 up to 100, 100 */
