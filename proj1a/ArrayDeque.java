@@ -161,7 +161,10 @@ public class ArrayDeque<T> {
 		if (back < front && index >back && index > front) {
 			return null;
 		}
-		return L[index];
+		int tem=front;
+		tem=(tem+index)%length;
+
+		return L[tem];
 	}
 
 } 

@@ -55,13 +55,9 @@ public class ArrayDequeTest {
 		ArrayDeque<Integer> A=new ArrayDeque<>();
 
 		System.out.println(A.isEmpty());
-		A.addFirst(1);
-		A.addFirst(2);
-		A.addFirst(3);
-		A.addFirst(4);
-		A.addFirst(5);
-		A.addFirst(6);
-		A.removeLast();
+		A.addFirst(0);
+		A.addLast(1);
+		System.out.println(A.get(0));
 		A.printDeque();
 	}
 
