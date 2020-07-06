@@ -3,11 +3,11 @@ public class ArrayDeque<T> {
 
 
 	private int size;
-	public int length;
-	public int front;
-	public int back;
+	private int length;
+	private int front;
+	private int back;
 	private static final double ratio=0.25;
-	public T[] L;
+	private T[] L;
 
 	public ArrayDeque() {
 		size=0;
