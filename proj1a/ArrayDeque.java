@@ -114,7 +114,7 @@ public class ArrayDeque<T> {
 		}
 		int tem= (back-1)%length;
 		if(tem<0) {
-			back+=length;
+			tem+=length;
 		}
 		T item = L[tem];
 		back= tem;
