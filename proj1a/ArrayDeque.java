@@ -148,8 +148,7 @@ public class ArrayDeque<T> {
 
 		return front == back;
 	}
-
-	public T get(int index) {
+        public T get(int index) {
 		if (index < 0 || index >=size) {
 			return null;
 		}
@@ -161,7 +160,10 @@ public class ArrayDeque<T> {
 		if (back < front && index >back && index > front) {
 			return null;
 		}
-		return L[index];
+		int tem=front;
+		tem=(tem+index)%length;
+
+		return L[tem];
 	}
 
 } 
