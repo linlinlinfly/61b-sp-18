@@ -3,11 +3,11 @@ public class ArrayDeque<T> {
 
 
 	private int size;
-	public int length;
-	public int front;
-	public int back;
+	private int length;
+	private int front;
+	private int back;
 	private static final double ratio=0.25;
-	public T[] L;
+	private T[] L;
 
 	public ArrayDeque() {
 		size=0;
@@ -114,7 +114,7 @@ public class ArrayDeque<T> {
 		}
 		int tem= (back-1)%length;
 		if(tem<0) {
-			back+=length;
+			tem+=length;
 		}
 		T item = L[tem];
 		back= tem;
@@ -146,7 +146,7 @@ public class ArrayDeque<T> {
 
 	public boolean isEmpty() {
 
-		return front == back;
+		return size==0;
 	}
 
 	public T get(int index) {

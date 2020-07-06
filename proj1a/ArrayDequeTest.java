@@ -8,8 +8,10 @@ public class ArrayDequeTest {
 
 	/* Prints a nice message based on whether a test passed.
 	 * The \n means newline. */
+/*
 	@Test
 	public void PrintTest() {
+
 		ArrayDeque<String> A=new ArrayDeque<>();
 		A=A.of("aa","bb","cc");
 
@@ -43,14 +45,24 @@ public class ArrayDequeTest {
 		A.printDeque();
 		System.out.println("len:"+A.length+" size:"+A.size());
 	}
-
+*/
 	/** Adds a few things to the list, checking isEmpty() and size() are correct, 
 	  * finally printing the results. 
 	  *
 	  * && is the "and" operation. */
 	@Test
 	public void IsEmptyTest() {
+		ArrayDeque<Integer> A=new ArrayDeque<>();
 
+		System.out.println(A.isEmpty());
+		A.addFirst(1);
+		A.addFirst(2);
+		A.addFirst(3);
+		A.addFirst(4);
+		A.addFirst(5);
+		A.addFirst(6);
+		A.removeLast();
+		A.printDeque();
 	}
 
 	/** Adds an item, then removes an item, and ensures that dll is empty afterwards. */
