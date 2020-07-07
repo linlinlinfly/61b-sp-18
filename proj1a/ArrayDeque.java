@@ -148,8 +148,7 @@ public class ArrayDeque<T> {
 
 		return size==0;
 	}
-
-	public T get(int index) {
+        public T get(int index) {
 		if (index < 0 || index >=size) {
 			return null;
 		}
