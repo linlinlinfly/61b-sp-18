@@ -52,7 +52,7 @@ public class ArrayDequeTest {
 	@Test
 	public void IsEmptyTest() {
 		ArrayDeque<Integer> ArrayDeque =new ArrayDeque<>();
-
+	/*
 		ArrayDeque.addLast(0);
 		ArrayDeque.get(0);
 		ArrayDeque.addLast(2);
@@ -72,6 +72,9 @@ public class ArrayDequeTest {
 		ArrayDeque.removeFirst();
 		ArrayDeque.addFirst(17);
 		ArrayDeque.get(6);
+		*/
+		ArrayDeque.addFirst(0);
+		ArrayDeque.get(0);
 	}
 
 	/** Adds an item, then removes an item, and ensures that dll is empty afterwards. */
