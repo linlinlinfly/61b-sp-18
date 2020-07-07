@@ -148,20 +148,22 @@ public class ArrayDeque<T> {
 
 		return size==0;
 	}
-        public T get(int index) {
-		if (index < 0 || index >=size) {
-			return null;
-		}
-		if (front < back && (index <front || index > back)) {
-			return null;
-		}
-
-
-		if (back < front && index >back && index > front) {
-			return null;
-		}
+	public T get(int index) {
 		int tem=front;
 		tem=(tem+index)%length;
+
+		if (tem < 0 || tem >=size) {
+			return null;
+		}
+		if (front < back && (tem <front || tem > back)) {
+			return null;
+		}
+
+
+		if (back < front && tem >back && tem > front) {
+			return null;
+		}
+
 
 		return L[tem];
 	}

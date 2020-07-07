@@ -1,5 +1,4 @@
 /** Performs some basic linked list tests. */
-import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class ArrayDequeTest {
@@ -52,13 +51,27 @@ public class ArrayDequeTest {
 	  * && is the "and" operation. */
 	@Test
 	public void IsEmptyTest() {
-		ArrayDeque<Integer> A=new ArrayDeque<>();
+		ArrayDeque<Integer> ArrayDeque =new ArrayDeque<>();
 
-		System.out.println(A.isEmpty());
-		A.addFirst(0);
-		A.addLast(1);
-		System.out.println(A.get(0));
-		A.printDeque();
+		ArrayDeque.addLast(0);
+		ArrayDeque.get(0);
+		ArrayDeque.addLast(2);
+		ArrayDeque.removeLast();
+		ArrayDeque.addLast(4);
+		ArrayDeque.addFirst(5);
+		ArrayDeque.removeFirst();
+		ArrayDeque.addFirst(7);
+		ArrayDeque.addFirst(8);
+		ArrayDeque.addFirst(9);
+		ArrayDeque.removeLast();
+		ArrayDeque.addFirst(11);
+		ArrayDeque.addFirst(12);
+		ArrayDeque.addFirst(13);
+		ArrayDeque.removeFirst();
+		ArrayDeque.addLast(15);
+		ArrayDeque.removeFirst();
+		ArrayDeque.addFirst(17);
+		ArrayDeque.get(6);
 	}
 
 	/** Adds an item, then removes an item, and ensures that dll is empty afterwards. */
