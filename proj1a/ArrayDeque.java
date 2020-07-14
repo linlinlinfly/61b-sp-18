@@ -1,7 +1,7 @@
 /** Performs some basic linked list tests. */
 public class ArrayDeque<T> {
 
-
+	/*1231*/
 	private int size;
 	private int length;
 	private int front;
